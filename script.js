@@ -25,6 +25,8 @@ const messages = [
     "Just say yes already! 💕"
 ];
 
+document.querySelector('audio').volume = 0.5; // Adjust volume (0.0 to 1.0)
+
 let messageIndex = 0;
 
 function handleNoClick() {
@@ -36,8 +38,16 @@ function handleNoClick() {
 
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = (currentSize + 70) + "px";
+
+    
 }
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
+
+// function toggleMusic() {
+//     const audio = document.querySelector('audio');
+//     audio.muted = !audio.muted;
+// }
+
